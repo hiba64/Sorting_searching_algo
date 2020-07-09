@@ -1,0 +1,17 @@
+ALGORITHM Sorting-searching
+VAR
+  Tab1:ARRAY_OF INTEGER[n];
+  comp,i,tmp:INTEGER;
+BEGIN
+  FOR i FROM 0 TO Tab1.length STEP 1  DO
+    tmp:=Tab1[i];
+    comp:=i;
+    WHILE (comp>0 AND tmp<Tab1[comp-1]) DO
+      Tab1[comp]:=Tab[comp-1];
+      comp:=comp-1;
+    END_WHILE
+    Tab1[comp]:=tmp;
+
+  END_FOR
+  write(Tab1);
+END
